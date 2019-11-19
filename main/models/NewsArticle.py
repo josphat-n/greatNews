@@ -3,7 +3,7 @@ class Article:
    The blueprint for article objects.
    """
    
-   def __init__(self,source, title, description, url, urlToImage,publishedAt)
+   def __init__(self,source, title, description, url, urlToImage,publishedAt):
       self.source = source
       self.title = title
       self.description = description

@@ -1,16 +1,16 @@
 from main import app
 import urllib.request,json
-from .models import Article
+from .models import NewsArticle
 
 Article = NewsArticle.Article
 
 #Get the api key
-api_key = app.config['News_API_KEY']
+api_key = app.config['NEWS_API_KEY']
 
 #Get the News base Url
-base_url = app.config["News_API_BASE_URL"]
+base_url = app.config["NEWS_API_BASE_URL"]
 
-def get_articles:
+def get_articles():
    """
    get articles using the json response
    """
@@ -22,7 +22,7 @@ def get_articles:
       
       article_results = None  
       
-     if get_articles_resp['articles']:
+      if get_articles_resp['articles']:
         article_results_list = get_articles_resp['articles']
         article_results= process_articles(article_results_list)
         
