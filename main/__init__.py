@@ -3,7 +3,9 @@ from .config import DevConfig
 from flask_bootstrap import Bootstrap
 
 #Initialize the app
-app = Flask(__name__,instance_relative_config = True)
+app = Flask(__name__,
+            instance_path='/home/njoro/Documents/moringa-school-projects/PY WORK/FLASK/greatNews/instance/',
+            instance_relative_config = True)
 
 #The configuration settings
 app.config.from_object(DevConfig)
