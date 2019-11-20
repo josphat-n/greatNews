@@ -1,7 +1,12 @@
 class Config:
    
-   NEWS_API_BASE_URL ='https://newsapi.org/v2/everything?q=bitcoin&sortBy=publishedAt&apiKey={}'
-
+   #This is the url for all named sources available in the News API website
+   SOURCE_URL = 'https://newsapi.org/v2/sources?apiKey={}'
+   
+   #URL for fetching the news articles.
+   ARTICLES_URL='https://newsapi.org/v2/everything?sources={}&apikey={}'
+   
+   
 class ProdConfig(Config):
    pass
 
