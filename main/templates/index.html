@@ -3,9 +3,8 @@
 {% block content %}
 <h3>News Sources</h3>
 <div class="list-group">
-   {% for dispArticle in articles %}
-   <!-- <a href="{{dispArticle.url}}" class="list-group-item list-group-item-action">{{dispArticle.name }}</a> -->
-   <a href ="https://newsapi.org/v2/top-headlines?sources={{dispArticle.name}}&apiKey=bdce22b292a844dba8423b3c16b5e7a4" class="list-group-item list-group-item-action">{{dispArticle.name }}</a>
+   {% for y in sourcess %}
+   <a href="/articles/{{y.id}}" class="list-group-item list-group-item-action">{{y.name }}</a>  
    {% endfor %}
 </div>
 {% endblock %}

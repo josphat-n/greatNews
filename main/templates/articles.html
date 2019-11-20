@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h3>News Articles</h3>
+<div class="list-group">
+   {% for x in articles %}
+   <p>{{x.description}}</p> 
+   {% endfor %}
+</div>
+{% endblock %}
