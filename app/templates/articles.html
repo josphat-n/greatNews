@@ -1,10 +1,29 @@
 {% extends 'base.html'%}
 
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/index.css')}}">
+{% endblock %}
+
 {% block content %}
 <h3>News Articles</h3>
-<div class="list-group">
+<div class="container">
    {% for x in articles %}
-   <p>{{x.description}}</p> 
+   <div class="row">
+      <div class="col-6 ">
+         <img src="{{ x.urlToImage }}"  width="350px" height="240px" alt="{{ x.title }} poster" >       
+      </div>
+      <div class="col-6">
+         <h3>{{x.title}}</h3>
+         <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{x.content}}</li>
+            <li class="list-group-item">Published on: {{x.publishedAt|truncate(13)}}</li>
+            <a href="{{x.url}}"><button class="btn btn-info">Read More</button></a>
+         </ul>   
+      </div>    
+   </div>
+   <hr>
    {% endfor %}
+   
 </div>
 {% endblock %}

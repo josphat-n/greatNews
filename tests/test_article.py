@@ -12,7 +12,7 @@ class ArticleTest(unittest.TestCase):
       """
       Set up method that will run before every Test
       """
-      self.new_article = Article("abc-news","ABC_News","Your trusted source for breaking news","https://abcnews.go.com", "general","us")
+      self.new_article = Article("abc-news","ABC_News","Your trusted source for breaking news", "Your trusted source for breaking news","https://abcnews.go.com", "general","us")
 
    def test_instance(self):
       self.assertTrue(isinstance(self.new_article,Article))

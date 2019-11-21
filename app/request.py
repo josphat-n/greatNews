@@ -77,11 +77,12 @@ def process_articles(article_list):
       source = article_item.get('source')
       title =  article_item.get('title')
       description =  article_item.get('description')
+      content = article_item.get('content')
       url =  article_item.get('url') 
       urlToImage =  article_item.get('urlToImage') 
       publishedAt =  article_item.get('publishedAt')
       
-      new_article = Article(source,title,description,url,urlToImage,publishedAt)
+      new_article = Article(source,title,description,content,url,urlToImage,publishedAt)
       article_results.append(new_article)
       
    return article_results     

@@ -22,10 +22,11 @@ class Article:
    """
    article_results = [] #An array of all articles
    
-   def __init__(self,source, title, description, url, urlToImage,publishedAt):
+   def __init__(self,source, title, description, content, url, urlToImage,publishedAt):
       self.source = source
       self.title = title
       self.description = description
+      self.content = content
       self.url = url
       self.urlToImage = urlToImage
       self.publishedAt = publishedAt
