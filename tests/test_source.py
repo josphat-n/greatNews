@@ -1,6 +1,7 @@
 import unittest
-from models import NewsSource
-Source = NewsSource.Source
+# from .models import NewsSource
+from models import Source
+# Source = NewsSource.Source
 
 class NewsTest(unittest.TestCase):
     """
@@ -19,7 +20,3 @@ class NewsTest(unittest.TestCase):
     def test_save_source(self):
         self.new_source.save_source()  # saving the new source
         self.assertEqual(len(Source.source_results),1)  
-
-
-if __name__ == '__main__':
-    unittest.main()

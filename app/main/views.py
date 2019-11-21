@@ -1,9 +1,9 @@
 from flask import render_template
-from main import app
-from .request import get_articles, get_sources
+from . import main
+from ..request import get_articles, get_sources
 
 #This defines the various views in our app
-@app.route('/')
+@main.route('/')
 def index():
    """
    function to return the index page and its resources
@@ -13,7 +13,7 @@ def index():
    
    return render_template('index.html', sourcess = display_sources)
 
-@app.route('/articles/<id>')
+@main.route('/articles/<id>')
 def source(id):
        
     display_articles = get_articles(id)
