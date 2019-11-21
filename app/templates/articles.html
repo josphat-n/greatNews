@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-<h3>News Articles</h3>
+<h3 style="margin-left: 40px;">News Articles</h3>
 <div class="container">
    {% for x in articles %}
    <div class="row">
@@ -16,7 +16,7 @@
       <div class="col-6">
          <h3>{{x.title}}</h3>
          <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{x.content}}</li>
+            <li class="list-group-item">{{x.description}}</li>
             <li class="list-group-item">Published on: {{x.publishedAt|truncate(13)}}</li>
             <a href="{{x.url}}"><button class="btn btn-info">Read More</button></a>
          </ul>   
