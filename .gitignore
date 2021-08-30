@@ -1,4 +1,6 @@
+.idea/
 virtual/
 *.pyc
 instance/
 start.sh
+secret_configs.py
